@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+    php:
+        image: berzavlu/server-gunbound:1
+        volumes:
+            - ./public_html:/var/www/html
+            - ./php/php.ini:/usr/local/etc/php/php.ini
+        expose:
+            - 80
+        ports:
+            - 80:80
